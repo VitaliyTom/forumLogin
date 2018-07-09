@@ -52,10 +52,10 @@ public class JspRegisterServlet extends HttpServlet {
         if (dao.getUsers().size() == 0 || !userCheck.getLoginName().equals(user.getLoginName())) {      //if the database is empty or there is no such login
 
             dao.addUsers(user);     //add user
-            message = "You have successfully registered!";
+            message = "Регистрация прошла успешно!";
 
         } else {
-            message = " A User with that name already exists, Try again!";
+            message = " Пользователь с таким логином уже существует, выберите другой логин!";
 
         }
         request.setAttribute("m", message);

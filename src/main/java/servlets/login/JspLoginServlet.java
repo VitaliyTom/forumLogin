@@ -50,7 +50,7 @@ public class JspLoginServlet extends HttpServlet {
         if (dao.getUsers().size() == 0 || !userCheck.getLoginName().equals(userLogining.getLoginName())     //if the database is empty
                 || !userCheck.getPasswdName().equals(userLogining.getPasswdName())) {       //or the login or password does not match
 
-            message = "Incorrect login or password";
+            message = "Неверный логин или пароль";
         } else {
            // message = "You are logged in as an account";
             request.setAttribute("n", loginName);

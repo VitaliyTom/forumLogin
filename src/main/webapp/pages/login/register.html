@@ -38,7 +38,7 @@
             txt_passwd_name_2 = form.txt_passwd_name_2.value;
 
             if (txt_passwd_name != txt_passwd_name_2) {
-                alert("\n Passwords do not match! \n Please repeat the password.")
+                alert(" Пароли не совпадают! Введите повторно пароль.")
                 return false;
             }
             else return true;
@@ -55,35 +55,35 @@
 <center>
 
     <form action="/jspregisterservlet" method="post" onSubmit="return checkPw(this)">
-        <div id="blink6" ><h1>{ Registration }</h1></div>
+        <div id="blink6" ><h1>{ Регистрация }</h1></div>
         <table>
             <tr>
-                <td><strong>[ Enter You login ] :</strong></td>
+                <td><strong>[ Введите логин ] :</strong></td>
                 <td>
                     <input type="email" maxlength="30" size="40" name="txt_login_name" required/>
                 </td>
             </tr>
             <tr>
-                <td><strong>[ Enter You password ] :</strong></td>
+                <td><strong>[ Введите пароль ] :</strong></td>
                 <td>
                     <input type="password" maxlength="20" size="40" name="txt_passwd_name" required/>
                 </td>
             </tr>
             <tr>
             <tr>
-                <td><strong>[ Confirm password ] :</strong></td>
+                <td><strong>[ Повторите пароль ] :</strong></td>
                 <td>
                     <input type="password" maxlength="20" size="40" name="txt_passwd_name_2" required/>
                 </td>
             </tr>
             <td colspan="2" align="left">
-                <input type="submit" value="Save"/>
+                <input type="submit" value="Сохранить"/>
             </td>
 
 
             </tr>
         </table>
-        <div id="blink7"><a href="/default.html">[ login ]</a></div>
+        <div id="blink7"><a href="/default.html">[ Вход ]</a></div>
     </form>
 
 

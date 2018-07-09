@@ -54,7 +54,7 @@
         <div id="blink6" ><h1>{ ${m} }</h1></div>
         <div ><h1>  ${login}   </h1></div>
 
-        <div id="blink7"><a href="/pages/login/register.html">[ Back ]</a>               <a href="default.html">[ login ]</a></div>
+        <div id="blink7"><a href="/pages/login/register.html">[ Назад ]</a>               <a href="default.html">[ Вход ]</a></div>
 
     </form>
 
