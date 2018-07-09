@@ -45,19 +45,29 @@ public class ForumServlet extends HttpServlet {
 
         //todo нормальная проверка
         if ("".equals(nick) || nick == null ) {
-            nick = req.getParameter("nick-param");
+                    nick= req.getParameter("nick-param");
             if ("".equals(nick) || nick == null) {
-
-                req.getServletContext().getRequestDispatcher("/pages/login/login.jsp").forward(req, resp);
-
+                String relog = "relogin";
+                req.setAttribute("relogin", relog);
+                req.getServletContext().getRequestDispatcher("/pages/login/jsplogin.jsp").forward(req, resp);
+                    return;
             }
             session.setAttribute("nick-session-param", nick);
         }
+
+
+
         String theme = req.getParameter("theme-param");                                                     //theme
         if ("".equals(theme) || theme == null) {
             theme = "notheme";
         }
+
+
         String text = req.getParameter("text-param");
+
+
+
+
         if (!(text == null || text.equals(""))) {
             // типПеременной названиеПеременной = значениеПеременной
             // условие ? елси да : если нет
@@ -71,7 +81,9 @@ public class ForumServlet extends HttpServlet {
             printMessages(req, resp, theme, nick);
 
         }
-    }
+
+
+           }
 
     private void printMessages(HttpServletRequest req, HttpServletResponse resp, String theme, String nick) throws ServletException, IOException {
 

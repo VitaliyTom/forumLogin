@@ -55,7 +55,7 @@ public class JspLoginServlet extends HttpServlet {
            // message = "You are logged in as an account";
             request.setAttribute("n", loginName);
             request.getServletContext().getRequestDispatcher("/pages/forum/start.jsp").forward(request, response);
-
+                return;
         }
         request.setAttribute("m", message);
         request.setAttribute("login", loginName);

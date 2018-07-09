@@ -102,7 +102,7 @@
 <center>
     <form>
 
-        <div id="blink6"><h1>{ ${m} }</h1></div>
+        <div id="blink6"><h1>{ ${relogin} ${m} }</h1></div>
         <div ><h1>  ${login}   </h1></div>
 
         <div id="blink7"><a href="/default.html">[ Back ]</a></div>
